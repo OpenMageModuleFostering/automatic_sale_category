@@ -18,41 +18,81 @@
                     <show_in_default>1</show_in_default>
                     <show_in_website>1</show_in_website>
                     <show_in_store>1</show_in_store>
-                    <fields>                        
-			<offer_category translate="label">
-                            <label>Sale/Offer Category</label>
-                             <comment><![CDATA[This category should be in category list.Give the name as it in the product category.
-                             Product with Special price in other categories will automatically added to this category.
-                             (Please consider the letter case.)]]></comment>
+                    <fields>
+                        <t_shirt_of_day_enable translate="label">
+                            <label>T-Shirt Of Day Category Enable</label>
+                            <comment><![CDATA[]]></comment>
                             <frontend_type>select</frontend_type>
-			    <source_model>Saleproducts/category</source_model>                                                    
+			    <source_model>adminhtml/system_config_source_yesno</source_model>                                                    
                             <sort_order>3</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
-                        </offer_category>
+                        </t_shirt_of_day_enable>                        
+			<t_shirt_of_day translate="label">
+                            <label>T-Shirt Of Day Category</label>
+                            <comment><![CDATA[Automatically add/remove products into selected category according to the date specified in the "special_price" dates]]></comment>
+                            <frontend_type>select</frontend_type>
+			    <source_model>Saleproducts/category</source_model>                                                    
+                            <sort_order>4</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends><t_shirt_of_day_enable>1</t_shirt_of_day_enable></depends>
+                        </t_shirt_of_day>
+                        <after_hour_enable translate="label">
+                            <label>After Hour Category Enable</label>
+                            <comment><![CDATA[]]></comment>
+                            <frontend_type>select</frontend_type>
+			    <source_model>adminhtml/system_config_source_yesno</source_model>                                                    
+                            <sort_order>5</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </after_hour_enable>
+                        <after_hour translate="label">
+                            <label>After Hour Category</label>
+                            <comment><![CDATA[Automatically add/remove products into selected category according to the date specified in new attributes: "afterhours_from_date" and "afterhours_to_date"]]></comment>
+                            <frontend_type>select</frontend_type>
+			    <source_model>Saleproducts/category</source_model>                                                    
+                            <sort_order>6</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends><after_hour_enable>1</after_hour_enable></depends>
+                        </after_hour>
+                        <gallery_enable translate="label">
+                            <label>Gallery Category Enable</label>
+                            <comment><![CDATA[]]></comment>
+                            <frontend_type>select</frontend_type>
+			    <source_model>adminhtml/system_config_source_yesno</source_model>                                                    
+                            <sort_order>7</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </gallery_enable>
+                        <gallery translate="label">
+                            <label>Gallery Category</label>
+                             <comment><![CDATA[Automatically add/remove products into selected category according to the date specified in new attributes: "gallery_from_date" and "gallery_to_date"]]></comment>
+                            <frontend_type>select</frontend_type>
+			    <source_model>Saleproducts/category</source_model>                                                    
+                            <sort_order>8</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends><gallery_enable>1</gallery_enable></depends>
+                        </gallery>
                         <offer_mail translate="label">
                             <label>Mail Notification.</label>
-                             <comment><![CDATA[This option will send a mail to the store email id with the products removed from
-                             Offer/Sale category.The product is only removed from the above category after the special price date ends]]></comment>
+                             <comment><![CDATA[This option will send a mail to the store email id with the products Added/removed from
+                              category.]]></comment>
                             <frontend_type>select</frontend_type>
                             <source_model>adminhtml/system_config_source_yesno</source_model>                                                    
                             <sort_order>10</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
-                        </offer_mail>
-                        <offer_cron translate="label">
-                            <label>Cron job after every Import.</label>
-                             <comment><![CDATA[A cron job will run immediately after every product import.All product will be checked for special price 
-                             and will add to sale/offer category.]]></comment>
-                            <frontend_type>select</frontend_type>
-                            <source_model>adminhtml/system_config_source_yesno</source_model>                                                    
-                            <sort_order>10</sort_order>
-                            <show_in_default>1</show_in_default>
-                            <show_in_website>1</show_in_website>
-                            <show_in_store>1</show_in_store>
-                        </offer_cron>
+                        </offer_mail>                        
                     </fields>
                 </general>
 		

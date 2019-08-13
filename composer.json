@@ -3,10 +3,10 @@
     "type": "magento-module",
     "license": "Open-Software-License-(OSL)",
     "homepage": "",
-    "description": "Simple extension,  automatically add products with special price to Sale or Offer category.",
+    "description": "Simple extension,  automatically add products with special price to selected category.",
     "authors": [
     {
-        "name": "Manu Jose K",
+        "name": "Manu Jose",
         "email": "iammanujose@gmail.com"
     }
 ],

@@ -35,19 +35,7 @@
             </adminhtml>
         </routers>
     </admin>
-    <global>
-        <events>
-            <catalog_product_import_finish_before>            
-                <observers>
-                    <Manu_Saleproducts>
-                        <type>singleton</type>
-                        <class>Manu_Saleproducts_Model_Observer</class>
-                        <method>saleProductsImport</method>
-                    </Manu_Saleproducts>    
-                </observers>            
-            </catalog_product_import_finish_before>
-            
-        </events>
+    <global>        
         <models>
             
             <Saleproducts>
@@ -85,8 +73,8 @@
   <crontab>
         <jobs>
             <remove_offer_products>
-                <schedule><cron_expr>0 19 * * *</cron_expr></schedule>
-                <run><model>Saleproducts/observer::removeOfferProducts</model></run>
+                <schedule><cron_expr>1 0 * * *</cron_expr></schedule>
+                <run><model>Saleproducts/observer::addRemoveProducts</model></run>
             </remove_offer_products>
         </jobs>
   </crontab>
