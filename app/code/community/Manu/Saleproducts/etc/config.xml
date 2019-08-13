@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+/**
+ * @category   Manu
+ * @package    Manu_Saleproducts
+ * @author     Manu
+ * @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ */
+ -->
+<config>
+    <modules>
+        <Manu_Saleproducts>
+            <version>0.1.0</version>
+        </Manu_Saleproducts>
+    </modules>
+    <frontend>
+        <routers>
+            <catalog>
+                <args>
+                    <modules>                        
+                        <Manu_Saleproducts before="Mage_Catalog">Manu_Saleproducts_Catalog</Manu_Saleproducts>
+                    </modules>
+                </args>
+            </catalog>
+        </routers>
+    </frontend>
+    <admin>
+        <routers>
+            <adminhtml>
+                <args>
+                    <modules>
+                        <Manu_Saleproducts before="Mage_Adminhtml">Manu_Saleproducts</Manu_Saleproducts>                        
+                    </modules>
+                </args>
+            </adminhtml>
+        </routers>
+    </admin>
+    <global>
+        <events>
+            <catalog_product_import_finish_before>            
+                <observers>
+                    <Manu_Saleproducts>
+                        <type>singleton</type>
+                        <class>Manu_Saleproducts_Model_Observer</class>
+                        <method>saleProductsImport</method>
+                    </Manu_Saleproducts>    
+                </observers>            
+            </catalog_product_import_finish_before>
+            
+        </events>
+        <models>
+            
+            <Saleproducts>
+                <class>Manu_Saleproducts_Model</class>
+            </Saleproducts>   
+            
+        </models>
+        <helpers>
+        <Saleproducts>
+            <class>Manu_Saleproducts_Helper</class>
+        </Saleproducts>
+        </helpers>
+    </global>
+    <adminhtml>
+        <acl>
+            <resources>
+                <admin>
+                    <children>
+                        <system>
+                            <children>
+                                <config>
+                                    <children>
+                                        <sale_category>
+                                            <title>Manu Sale Products</title>
+                                        </sale_category>
+                                    </children>
+                                </config>
+                            </children>
+                        </system>
+                    </children>
+                </admin>
+            </resources>
+        </acl>
+    </adminhtml>
+  <crontab>
+        <jobs>
+            <remove_offer_products>
+                <schedule><cron_expr>0 19 * * *</cron_expr></schedule>
+                <run><model>Saleproducts/observer::removeOfferProducts</model></run>
+            </remove_offer_products>
+        </jobs>
+  </crontab>
+</config>

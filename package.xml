@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<package>
+    <name>Automatic_Sale_Category</name>
+    <version>1.0.0</version>
+    <stability>stable</stability>
+    <license uri="http://opensource.org/licenses/osl-3.0.php">Open Software License (OSL)</license>
+    <channel>community</channel>
+    <extends/>
+    <summary>Simple extension,  automatically add products with special price to Sale or Offer category.</summary>
+    <description>This extension will automatically add/remove products with special price into a Sale or Offer category according to the date specified. Daily Cron job to add or remove products from sale category. This extension also supports product import. If special price added in import csv, the product will automatically add to sale category.Administrator can create new category or existing category as sale category.  &#xD;
+&#xD;
+&#xD;
+&#xD;
+</description>
+    <notes>This extension will automatically add/remove products with special price into a Sale or Offer category according to the date specified.&#xD;
+&#xD;
+Supports:&#xD;
+MultiStore&#xD;
+Product import.&#xD;
+&#xD;
+Features:&#xD;
+Mail Notification&#xD;
+Cron Job&#xD;
+</notes>
+    <authors><author><name>Manu Jose K</name><user>iammanujose</user><email>iammanujose@gmail.com</email></author></authors>
+    <date>2012-07-31</date>
+    <time>14:53:46</time>
+    <contents><target name="magecommunity"><dir name="Manu"><dir><dir name="Saleproducts"><dir name="Block"><file name="Saleproducts.php" hash="09c109bb3f6ef9427b2364ffe544f5a8"/></dir><dir name="Helper"><file name="Data.php" hash="c18f385a84745660c1bc48c55961c101"/></dir><dir name="Model"><file name="Category.php" hash="9aff440bb5927d5e54584afa2bfa8519"/><file name="Observer.php" hash="ee71dd0379be18613ca3733dec3dd1d4"/></dir><dir name="controllers"><dir name="Catalog"><file name="ProductController.php" hash="d5c9b645f150c1e35f02a386670eff30"/></dir></dir><dir name="etc"><file name="config.xml" hash="09503480d196ec36a83dff45bbdfa408"/><file name="system.xml" hash="a190157bb6c2350d3df37e66f3e6b9df"/></dir></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="Manu_Saleproducts.xml" hash="10e0c0c0f2eb317ec09b8ba1889e04ce"/></dir></target></contents>
+    <compatible/>
+    <dependencies><required><php><min>5.1.0</min><max>6.0.0</max></php></required></dependencies>
+</package>

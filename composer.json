@@ -1,0 +1,16 @@
+{
+    "name": "OpenMageModuleFostering/Automatic_Sale_Category",
+    "type": "magento-module",
+    "license": "Open-Software-License-(OSL)",
+    "homepage": "",
+    "description": "Simple extension,  automatically add products with special price to Sale or Offer category.",
+    "authors": [
+    {
+        "name": "Manu Jose K",
+        "email": "iammanujose@gmail.com"
+    }
+],
+    "suggest": {
+        "magento-hackathon/magento-composer-installer": "*"
+    }
+}
