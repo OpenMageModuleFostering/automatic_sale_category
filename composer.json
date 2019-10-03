@@ -1,7 +1,7 @@
 {
-    "name": "OpenMageModuleFostering\/Automatic_Sale_Category",
+    "name": "openmage-module-fostering\/automatic_sale_category",
     "type": "magento-module",
-    "license": "Open-Software-License-(OSL)",
+    "license": "OSL-3.0",
     "homepage": "",
     "description": "Simple extension,  automatically add products with special price to selected category.",
     "authors": [

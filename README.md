@@ -1,3 +1,5 @@
+
+
 ## Original Package Description
 
 Simple extension,  automatically add products with special price to selected category.
