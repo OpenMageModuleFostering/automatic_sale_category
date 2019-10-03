@@ -1,16 +1,19 @@
 {
-    "name": "OpenMageModuleFostering/Automatic_Sale_Category",
+    "name": "OpenMageModuleFostering\/Automatic_Sale_Category",
     "type": "magento-module",
     "license": "Open-Software-License-(OSL)",
     "homepage": "",
     "description": "Simple extension,  automatically add products with special price to selected category.",
     "authors": [
-    {
-        "name": "Manu Jose",
-        "email": "iammanujose@gmail.com"
-    }
-],
+        {
+            "name": "Manu Jose",
+            "email": "iammanujose@gmail.com"
+        }
+    ],
     "suggest": {
-        "magento-hackathon/magento-composer-installer": "*"
-    }
+        "magento-hackathon\/magento-composer-installer": "*"
+    },
+    "keywords": [
+        "openmage-module"
+    ]
 }
